@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DocCheck</string>
+    <string name="app_subtitle">Document Tampering\nDetection</string>
+
+    <!-- Welcome -->
+    <string name="welcome_skip">Skip</string>
+    <string name="welcome_title">Trust every document.</string>
+    <string name="welcome_description">DocCheck detects tampering in document images, including cloned regions, splices, font changes and altered metadata, and lets you ask an AI assistant about your results.</string>
+    <string name="welcome_get_started">Get Started</string>
+    <string name="welcome_existing_account">I already have an account</string>
+    <string name="welcome_slide1_title">Detect tampering</string>
+    <string name="welcome_slide1_desc">Copy-move, splice and font forensics powered by visual signal analysis.</string>
+    <string name="welcome_slide2_title">Understand the evidence</string>
+    <string name="welcome_slide2_desc">Error-level analysis and deep metadata audit highlight every anomaly.</string>
+    <string name="welcome_slide3_title">Ask DocCheck AI</string>
+    <string name="welcome_slide3_desc">Chat with a RAG assistant grounded in forensic literature and your scan.</string>
+
+    <!-- Auth -->
+    <string name="auth_welcome_back">Welcome back</string>
+    <string name="auth_welcome_sub">Sign in to access your forensic workspace and AI assistant.</string>
+    <string name="auth_create_account_title">Create account</string>
+    <string name="auth_create_account_sub">Start verifying documents with instant forensic reports.</string>
+    <string name="auth_login_tab">Log In</string>
+    <string name="auth_signup_tab">Sign Up</string>
+    <string name="auth_full_name">Full name</string>
+    <string name="auth_email">Email address</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_confirm_password">Confirm password</string>
+    <string name="auth_forgot_password">Forgot password?</string>
+    <string name="auth_login_cta">Log In</string>
+    <string name="auth_signup_cta">Create Account</string>
+    <string name="auth_or_continue">or continue with</string>
+    <string name="auth_google_cta">Continue with Google</string>
+    <string name="auth_reset_sent">Password reset link sent (mock mode).</string>
+    <string name="err_name_required">Please enter your full name</string>
+    <string name="err_invalid_email">Enter a valid email address</string>
+    <string name="err_password_short">Password must be at least 8 characters</string>
+    <string name="err_password_mismatch">Passwords do not match</string>
+
+    <!-- Home -->
+    <string name="home_hero_title">Verify Document Authenticity</string>
+    <string name="home_hero_desc">Upload PNG or JPG document images to detect copy-move cloning, splice artifacts, font tampering, and altered metadata.</string>
+    <string name="home_upload_cta">Upload Document (PNG / JPG)</string>
+    <string name="home_formats_label">Formats:</string>
+    <string name="home_format_png">PNG</string>
+    <string name="home_format_jpg">JPG / JPEG</string>
+    <string name="home_format_max">Max 25MB</string>
+    <string name="home_stat_scanned">Images Scanned</string>
+    <string name="home_stat_tampered">Tampered</string>
+    <string name="home_stat_accuracy">Accuracy</string>
+    <string name="stat_accuracy_fmt">%.1f%%</string>
+    <string name="result_score_fmt">%d%%</string>
+    <string name="home_toolkit_title">Forensic Toolkit</string>
+    <string name="home_toolkit_badge">4 Modules</string>
+    <string name="module_copymove_title">Copy-Move</string>
+    <string name="module_copymove_desc">Detect duplicated or cloned pixels &amp; stamps.</string>
+    <string name="module_ela_title">Error Level (ELA)</string>
+    <string name="module_ela_desc">Expose compression variance in image splices.</string>
+    <string name="module_metadata_title">Metadata Audit</string>
+    <string name="module_metadata_desc">Check editing software &amp; timestamp traces.</string>
+    <string name="module_signature_title">Signature Check</string>
+    <string name="module_signature_desc">Validate ink bleeding, edges &amp; stroke patterns.</string>
+    <string name="home_analyzing">Running forensic checks…</string>
+    <string name="home_notifications_none">All forensic engines online. 2 recent scan summaries ready.</string>
+    <string name="err_file_type">Please select a PNG or JPG image.</string>
+    <string name="err_file_size">Image exceeds the 25MB limit. Please choose a smaller file.</string>
+
+    <!-- Result -->
+    <string name="result_title">Forensic Report</string>
+    <string name="result_tamper_prob">Tamper Probability</string>
+    <string name="result_verdict_tampered">Tampering Detected</string>
+    <string name="result_verdict_clean">Likely Authentic</string>
+    <string name="result_findings_header">Module Findings</string>
+    <string name="result_ask_ai">Ask DocCheck AI about this</string>
+
+    <!-- Chat -->
+    <string name="chat_title">DocCheck AI</string>
+    <string name="chat_subtitle">Ask about documents &amp; forensics</string>
+    <string name="chat_online">Online</string>
+    <string name="chat_empty_title">Ask me anything about tampering detection</string>
+    <string name="chat_chip_1">What is error level analysis?</string>
+    <string name="chat_chip_2">Why was my document flagged?</string>
+    <string name="chat_chip_3">How do I spot a cloned stamp?</string>
+    <string name="chat_chip_4">Explain metadata audit</string>
+    <string name="chat_input_hint">Ask DocCheck AI…</string>
+    <string name="chat_scan_attached">Scan result attached</string>
+    <string name="chat_menu_clear">Clear chat</string>
+    <string name="chat_menu_export">Export chat</string>
+    <string name="chat_cleared">Conversation cleared</string>
+    <string name="chat_exported">Chat transcript copied to clipboard</string>
+    <string name="chat_source_sheet_title">Retrieved Forensic Source</string>
+    <string name="chat_source_chip_fmt">%1$s · p.%2$d</string>
+    <string name="chat_source_sheet_header_fmt">%1$s (Page %2$d)</string>
+    <string name="chat_attached_meta_fmt">Tamper probability: %d%%</string>
+
+    <!-- History & Settings -->
+    <string name="history_title">Scan History</string>
+    <string name="history_empty">No scans yet. Upload a document from Home to inspect its forensic report.</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance">Dark Appearance</string>
+    <string name="settings_appearance_sub">Switch between soft lilac day and night themes</string>
+    <string name="settings_mock_mode">Mock Backend Active</string>
+    <string name="settings_mock_sub">Running offline with simulated forensics &amp; RAG answers</string>
+    <string name="settings_clear_history">Clear Scan History</string>
+    <string name="settings_logout">Log Out</string>
+
+    <!-- Bottom Nav & Accessibility -->
+    <string name="nav_home">Home</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_theme_toggle">Toggle dark mode</string>
+    <string name="cd_notifications">Notifications</string>
+    <string name="cd_logo">DocCheck logo</string>
+    <string name="cd_send">Send message</string>
+    <string name="cd_attach">Attach document image</string>
+    <string name="cd_menu">Chat options</string>
+    <string name="cd_open_module">Open module</string>
+    <string name="cd_scanned_doc">Scanned document preview</string>
+</resources>

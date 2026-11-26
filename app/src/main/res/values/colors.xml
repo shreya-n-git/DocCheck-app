@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Palette -->
+    <color name="bg_lavender">#B9ADD0</color>
+    <color name="bg_lavender_end">#C9BFDD</color>
+    <color name="glass_card">#99D9D0E8</color>
+    <color name="glass_card_solid">#D9D0E8</color>
+    <color name="glass_inner">#73FFFFFF</color>
+    <color name="glass_stroke">#59FFFFFF</color>
+
+    <!-- Accents -->
+    <color name="accent_pink">#E3B5C0</color>
+    <color name="accent_pink_soft">#66E3B5C0</color>
+    <color name="accent_mint">#9ED9D0</color>
+    <color name="accent_mint_soft">#669ED9D0</color>
+    <color name="accent_lilac">#C8BBE2</color>
+
+    <!-- Text & Surfaces -->
+    <color name="ink">#111111</color>
+    <color name="ink_inverse">#FFFFFF</color>
+    <color name="ink_on_accent">#111111</color>
+    <color name="muted">#7A7090</color>
+    <color name="shadow_purple">#503C78</color>
+    <color name="error_pink">#B83B5E</color>
+    <color name="error_fill">#40E3B5C0</color>
+
+    <!-- Navigation & Interactive -->
+    <color name="nav_pill_bg">#CCE7E0F3</color>
+    <color name="nav_active_pill">#111111</color>
+    <color name="nav_active_content">#FFFFFF</color>
+    <color name="nav_inactive_circle">#73FFFFFF</color>
+    <color name="ripple_soft">#1F503C78</color>
+    <color name="ripple_on_dark">#33FFFFFF</color>
+    <color name="radar_white">#33FFFFFF</color>
+    <color name="divider_soft">#337A7090</color>
+    <color name="sheet_scrim">#661E1730</color>
+</resources>
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="gap_xs">6dp</dimen>
+    <dimen name="gap_sm">12dp</dimen>
+    <dimen name="gap_md">16dp</dimen>
+    <dimen name="gap_lg">24dp</dimen>
+
+    <!-- Radii -->
+    <dimen name="radius_card">28dp</dimen>
+    <dimen name="radius_card_lg">32dp</dimen>
+    <dimen name="radius_logo_tile">16dp</dimen>
+    <dimen name="radius_pill">100dp</dimen>
+    <dimen name="radius_chat_bubble">24dp</dimen>
+    <dimen name="radius_chat_tail">6dp</dimen>
+    <dimen name="stroke_glass">1dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_glass">6dp</dimen>
+    <dimen name="elevation_nav">10dp</dimen>
+
+    <!-- Component Sizes -->
+    <dimen name="icon_btn_size">44dp</dimen>
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="logo_tile_size">52dp</dimen>
+    <dimen name="logo_tile_small">40dp</dimen>
+    <dimen name="primary_btn_height">56dp</dimen>
+    <dimen name="bottom_nav_margin">20dp</dimen>
+    <dimen name="bottom_nav_height">68dp</dimen>
+    <dimen name="bottom_scroll_clearance">112dp</dimen>
+    <dimen name="chat_bottom_clearance">184dp</dimen>
+
+    <!-- Typography -->
+    <dimen name="text_display">40sp</dimen>
+    <dimen name="text_brand">32sp</dimen>
+    <dimen name="text_heading">24sp</dimen>
+    <dimen name="text_section">22sp</dimen>
+    <dimen name="text_card_title">18sp</dimen>
+    <dimen name="text_subtitle">15sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_micro">11sp</dimen>
+</resources>
+

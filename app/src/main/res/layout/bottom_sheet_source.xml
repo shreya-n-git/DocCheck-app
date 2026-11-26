@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sourceSheetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/screen_padding"
+    android:paddingTop="14dp"
+    android:paddingBottom="28dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/dot_inactive" />
+
+    <TextView
+        style="@style/TextAppearance.DocCheck.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/chat_source_sheet_title" />
+
+    <TextView
+        android:id="@+id/tvSourceTitlePage"
+        style="@style/TextAppearance.DocCheck.CardTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tvSourceSnippet"
+        style="@style/TextAppearance.DocCheck.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_glass_card"
+        android:lineSpacingMultiplier="1.3"
+        android:padding="16dp" />
+
+</LinearLayout>
+

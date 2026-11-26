@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_lavender_gradient">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/homeScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/homeContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/screen_padding"
+            android:paddingTop="12dp"
+            android:paddingBottom="@dimen/bottom_scroll_clearance">
+
+            <!-- Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/logo_tile_size"
+                    android:layout_height="@dimen/logo_tile_size"
+                    android:background="@drawable/bg_glass_logo_tile">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/cd_logo"
+                        android:src="@drawable/ic_shield"
+                        app:tint="@color/ink" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/app_name"
+                        android:textColor="@color/ink"
+                        android:textSize="@dimen/text_brand" />
+
+                    <TextView
+                        style="@style/TextAppearance.DocCheck.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.05"
+                        android:text="@string/app_subtitle"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Theme Toggle Button (48dp touch target) -->
+                <FrameLayout
+                    android:id="@+id/btnThemeToggle"
+                    android:layout_width="@dimen/touch_target_min"
+                    android:layout_height="@dimen/touch_target_min"
+                    android:clickable="true"
+                    android:contentDescription="@string/cd_theme_toggle"
+                    android:focusable="true">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/icon_btn_size"
+                        android:layout_height="@dimen/icon_btn_size"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_glass_circle">
+
+                        <ImageView
+                            android:id="@+id/ivThemeIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_moon"
+                            app:tint="@color/ink" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <!-- Notifications Bell Button with Pink Dot -->
+                <FrameLayout
+                    android:id="@+id/btnNotifications"
+                    android:layout_width="@dimen/touch_target_min"
+                    android:layout_height="@dimen/touch_target_min"
+                    android:layout_marginStart="4dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/cd_notifications"
+                    android:focusable="true">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/icon_btn_size"
+                        android:layout_height="@dimen/icon_btn_size"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_glass_circle">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_bell"
+                            app:tint="@color/ink" />
+
+                        <View
+                            android:id="@+id/notificationBadge"
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_gravity="top|end"
+                            android:layout_marginTop="9dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/bg_badge_dot" />
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Hero Card: Verify Document Authenticity -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/heroCard"
+                style="@style/Widget.DocCheck.GlassCardLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardPreventCornerOverlap="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false">
+
+                    <!-- Faint Concentric Radar Circles -->
+                    <ImageView
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
+                        android:layout_marginTop="-30dp"
+                        android:layout_marginEnd="-45dp"
+                        android:alpha="0.2"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/bg_radar_circles"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Decorative 3D Spheres Bleed Right -->
+                    <ImageView
+                        android:layout_width="176dp"
+                        android:layout_height="156dp"
+                        android:layout_marginTop="-18dp"
+                        android:layout_marginEnd="-42dp"
+                        android:alpha="0.9"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/art_spheres"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_padding"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            style="@style/TextAppearance.DocCheck.Heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="84dp"
+                            android:text="@string/home_hero_title" />
+
+                        <TextView
+                            style="@style/TextAppearance.DocCheck.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="64dp"
+                            android:lineSpacingMultiplier="1.25"
+                            android:text="@string/home_hero_desc"
+                            android:textColor="@color/muted" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnUploadDocument"
+                            style="@style/Widget.DocCheck.PrimaryPillButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="@string/home_upload_cta"
+                            app:icon="@drawable/ic_upload"
+                            app:iconGravity="textStart"
+                            app:iconPadding="10dp" />
+
+                        <!-- Format Chips Row -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextAppearance.DocCheck.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/home_formats_label" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:background="@drawable/bg_glass_pill"
+                                android:fontFamily="sans-serif"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp"
+                                android:text="@string/home_format_png"
+                                android:textColor="@color/ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/bg_glass_pill"
+                                android:fontFamily="sans-serif"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp"
+                                android:text="@string/home_format_jpg"
+                                android:textColor="@color/ink"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:background="@drawable/bg_glass_pill"
+                                android:fontFamily="sans-serif"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp"
+                                android:text="@string/home_format_max"
+                                android:textColor="@color/ink"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Stats Row: 3 Equal Glass Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!-- Images Scanned -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardStatScanned"
+                    style="@style/Widget.DocCheck.GlassCard"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvStatScanned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="142"
+                            android:textColor="@color/ink"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            style="@style/TextAppearance.DocCheck.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/home_stat_scanned"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Tampered -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardStatTampered"
+                    style="@style/Widget.DocCheck.GlassCard"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_marginHorizontal="@dimen/gap_sm"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvStatTampered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="11"
+                            android:textColor="@color/accent_pink"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            style="@style/TextAppearance.DocCheck.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="@string/home_stat_tampered"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Accuracy -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardStatAccuracy"
+                    style="@style/Widget.DocCheck.GlassCard"
+                    android:layout_width="0dp"
+                    android:layout_height="104dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.progressindicator.CircularProgressIndicator
+                                android:id="@+id/pbAccuracy"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:layout_gravity="center"
+                                android:max="100"
+                                android:progress="99"
+                                app:indicatorColor="@color/accent_mint"
+                                app:indicatorSize="44dp"
+                                app:trackColor="@color/glass_stroke"
+                                app:trackThickness="3.5dp" />
+
+                            <TextView
+                                android:id="@+id/tvStatAccuracy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="sans-serif"
+                                android:text="99.4%"
+                                android:textColor="@color/ink"
+                                android:textSize="11sp" />
+                        </FrameLayout>
+
+                        <TextView
+                            style="@style/TextAppearance.DocCheck.Caption"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/home_stat_accuracy"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Forensic Toolkit Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/home_toolkit_title"
+                    android:textColor="@color/ink"
+                    android:textSize="@dimen/text_section" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_black"
+                    android:fontFamily="sans-serif"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:text="@string/home_toolkit_badge"
+                    android:textColor="@color/ink_inverse"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- 2x2 Grid RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvToolkit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Analyzing Overlay -->
+    <FrameLayout
+        android:id="@+id/analyzingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sheet_scrim"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.DocCheck.GlassCardLarge"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/glass_card_solid">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:indeterminate="true"
+                    app:indicatorColor="@color/ink"
+                    app:trackColor="@color/glass_stroke" />
+
+                <TextView
+                    style="@style/TextAppearance.DocCheck.CardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:text="@string/home_analyzing"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+</FrameLayout>
+

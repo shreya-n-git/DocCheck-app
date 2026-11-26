@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Typography Styles — using system sans-serif (Urbanist TTFs can be dropped in later) -->
+    <style name="TextAppearance.DocCheck.Display" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:lineSpacingMultiplier">1.05</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextAppearance.DocCheck.Heading" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">@dimen/text_heading</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="TextAppearance.DocCheck.CardTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">@dimen/text_card_title</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="TextAppearance.DocCheck.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="TextAppearance.DocCheck.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:textColor">@color/muted</item>
+    </style>
+
+    <!-- Glass Cards -->
+    <style name="Widget.DocCheck.GlassCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/glass_card</item>
+        <item name="cardCornerRadius">@dimen/radius_card</item>
+        <item name="cardElevation">@dimen/elevation_glass</item>
+        <item name="strokeColor">@color/glass_stroke</item>
+        <item name="strokeWidth">@dimen/stroke_glass</item>
+        <item name="android:outlineSpotShadowColor">@color/shadow_purple</item>
+        <item name="android:outlineAmbientShadowColor">@color/shadow_purple</item>
+        <item name="rippleColor">@color/ripple_soft</item>
+    </style>
+
+    <style name="Widget.DocCheck.GlassCardLarge" parent="Widget.DocCheck.GlassCard">
+        <item name="cardCornerRadius">@dimen/radius_card_lg</item>
+    </style>
+
+    <!-- Primary Black Pill Button -->
+    <style name="Widget.DocCheck.PrimaryPillButton" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/primary_btn_height</item>
+        <item name="backgroundTint">@color/ink</item>
+        <item name="android:textColor">@color/ink_inverse</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/radius_pill</item>
+        <item name="rippleColor">@color/ripple_on_dark</item>
+        <item name="iconTint">@color/ink_inverse</item>
+    </style>
+
+    <!-- Glass Pill Button -->
+    <style name="Widget.DocCheck.GlassPillButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/primary_btn_height</item>
+        <item name="backgroundTint">@color/glass_inner</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/radius_pill</item>
+        <item name="strokeColor">@color/glass_stroke</item>
+        <item name="strokeWidth">@dimen/stroke_glass</item>
+        <item name="rippleColor">@color/ripple_soft</item>
+    </style>
+
+    <!-- Pill TextInputLayout -->
+    <style name="Widget.DocCheck.PillInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/glass_inner</item>
+        <item name="boxStrokeColor">@color/input_stroke_selector</item>
+        <item name="boxStrokeErrorColor">@color/error_pink</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_card</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_card</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_card</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_card</item>
+        <item name="hintTextColor">@color/muted</item>
+        <item name="android:textColorHint">@color/muted</item>
+        <item name="errorTextColor">@color/error_pink</item>
+        <item name="errorIconTint">@color/error_pink</item>
+    </style>
+
+    <style name="ShapeAppearance.DocCheck.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

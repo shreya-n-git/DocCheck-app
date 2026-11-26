@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="320dp"
+    android:viewportWidth="360"
+    android:viewportHeight="320">
+
+    <!-- Soft ambient shadow ellipse -->
+    <path android:pathData="M180,278 m-118,0 a118,22 0 1,0 236,0 a118,22 0 1,0 -236,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="180"
+                android:centerY="278"
+                android:gradientRadius="120"
+                android:type="radial">
+                <item android:color="#30503C78" android:offset="0" />
+                <item android:color="#00503C78" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Metallic curved capsule tube (back) -->
+    <path android:pathData="M42,165 C70,92 162,72 222,126 C244,146 254,175 232,192 C210,209 182,190 162,172 C134,148 92,158 76,188 C62,212 30,196 42,165 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="245"
+                android:endY="192"
+                android:startX="42"
+                android:startY="105"
+                android:type="linear">
+                <item android:color="#F4F2F8" android:offset="0" />
+                <item android:color="#C3BED0" android:offset="0.45" />
+                <item android:color="#8F88A2" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Large glossy purple sphere -->
+    <path android:pathData="M214,132 m-86,0 a86,86 0 1,0 172,0 a86,86 0 1,0 -172,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="182"
+                android:centerY="98"
+                android:gradientRadius="125"
+                android:type="radial">
+                <item android:color="#F3ECFF" android:offset="0" />
+                <item android:color="#C5B2E6" android:offset="0.32" />
+                <item android:color="#8D73BC" android:offset="0.72" />
+                <item android:color="#5E488A" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Specular highlight on large sphere -->
+    <path
+        android:fillAlpha="0.55"
+        android:fillColor="#FFFFFF"
+        android:pathData="M174,78 C186,68 206,70 212,82 C216,90 202,102 188,100 C174,98 164,86 174,78 Z" />
+
+    <!-- Secondary pastel-pink/lilac sphere (left foreground) -->
+    <path android:pathData="M96,192 m-54,0 a54,54 0 1,0 108,0 a54,54 0 1,0 -108,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="78"
+                android:centerY="170"
+                android:gradientRadius="80"
+                android:type="radial">
+                <item android:color="#FFF7FA" android:offset="0" />
+                <item android:color="#E8C7D3" android:offset="0.38" />
+                <item android:color="#B898C8" android:offset="0.78" />
+                <item android:color="#7D629C" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Metallic floating tube pill (bottom right) -->
+    <path android:pathData="M204,218 L292,188 C306,183 321,191 326,205 C331,219 323,234 309,239 L221,269 C207,274 192,266 187,252 C182,238 190,223 204,218 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="318"
+                android:endY="248"
+                android:startX="198"
+                android:startY="210"
+                android:type="linear">
+                <item android:color="#FFFFFF" android:offset="0" />
+                <item android:color="#D2CEE0" android:offset="0.45" />
+                <item android:color="#8F89A1" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Small floating mint-pearl accent sphere -->
+    <path android:pathData="M288,82 m-24,0 a24,24 0 1,0 48,0 a24,24 0 1,0 -48,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="280"
+                android:centerY="72"
+                android:gradientRadius="36"
+                android:type="radial">
+                <item android:color="#FFFFFF" android:offset="0" />
+                <item android:color="#BEEBE4" android:offset="0.45" />
+                <item android:color="#7EBAB1" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
+
