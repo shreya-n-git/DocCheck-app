@@ -40,59 +40,8 @@ com.doccheck.app
  └─ util             (Constants, ValidationUtils, FileUtils, GlassBlurHelper)
 ```
 
----
 
-## Running & Building
 
-```bash
-./gradlew assembleDebug
-```
 
-Out of the box, `BuildConfig.USE_MOCK` is `true`, so authentication, document forensic scoring, and RAG chat streaming all work offline with realistic mock data.
-
----
-
-## Plugging In Real Backend & Firebase Keys
-
-1. **Backend URL & Mock Toggle** (`app/build.gradle.kts`):
-   - Set `buildConfigField("boolean", "USE_MOCK", "false")`
-   - Set `buildConfigField("String", "BASE_URL", "\"https://your-fastapi-host.com/\"")`
-2. **Firebase Authentication** (`AuthRepository.kt`):
-   - Create a Firebase project and download `google-services.json` into `app/google-services.json`.
-   - Add the `com.google.gms.google-services` Gradle plugin in `build.gradle.kts` and `app/build.gradle.kts`.
-   - Enable Email/Password and Google Sign-In providers in Firebase Console and configure your Web Client ID in `AuthFragment` / `AuthRepository`.
-
----
-
-## Backend Contract (FastAPI + RAG Pipeline Reference)
-
-The Android client expects the following Python FastAPI endpoints when `USE_MOCK = false`:
-
-1. **`POST /api/analyze`** (`multipart/form-data`)
-   - Request: `file` (PNG/JPG image), optional `module` (`COPY_MOVE | ELA | METADATA | SIGNATURE`)
-   - Response:
-     ```json
-     {
-       "id": "uuid",
-       "tamper_score": 78,
-       "findings": [
-         { "module": "Error Level (ELA)", "severity": "HIGH", "description": "..." }
-       ],
-       "timestamp": 1732440000000
-     }
-     ```
-2. **`GET /api/stats`**
-   - Response: `{ "scanned": 142, "tampered": 11, "accuracy": 99.4 }`
-3. **`POST /api/chat`** (and optional SSE **`POST /api/chat/stream`**)
-   - Request: `{ "session_id": "...", "message": "...", "scan_context": { "scan_id": "...", "tamper_score": 78, "findings": [...] } }`
-   - Pipeline: Embed user query → retrieve top-$k$ forensic knowledge chunks from Chroma/FAISS vector store → generate grounded LLM response with citations.
-   - Response:
-     ```json
-     {
-       "answer": "...",
-       "sources": [
-         { "title": "ELA_guide.pdf", "page": 4, "snippet": "..." }
-       ]
-     }
      ```
 
